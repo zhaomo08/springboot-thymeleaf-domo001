@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{title}">Title</title>
+</head>
+<body>
+    <!--thymeleaf如果没有渲染就显示原来内容,渲染的话覆盖-->
+    <h1 th:text="${message}">显示内容</h1>
+    <span th:text="#{message1}">消息1</span>
+    <span th:text="#{message2}">消息2</span>
+</body>
+</html>

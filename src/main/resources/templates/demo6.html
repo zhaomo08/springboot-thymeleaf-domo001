@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{title}">Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{css/style.css}" href="css/webbase.css" />
+</head>
+<body>
+
+    <span th:text="${#dates.format(now,'yyyy-MM-dd HH:mm:ss')}"></span>
+    <br>
+    价格:<span th:text="${#numbers.formatDecimal(price,1,2)}"></span>
+    <br>
+    价格:<span th:text="${#numbers.formatDecimal(price1,2,2)}"></span>
+
+    <br>
+    <p th:text="${#strings.substring(strText,0,36)}"></p>
+    <br>
+    <p th:text="${#strings.abbreviate(strText,36)}"></p>
+
+    <br>
+    <!-- 判断字符串是否为空-->
+    <span th:if="${!#strings.isEmpty(str2)}">字符串str2 不为空</span></br>
+    <!-- 截取字符串，指定长度-->
+    <span th:text="${#strings.substring(str2,0,4)}">字符串str2 的值</span>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{title}">Title</title>
+</head>
+<body>
+    请输入你的姓名:<input type="text" th:value="${name}">
+    <br>
+    图片:<img th:src="${pic}">
+    <br>
+    <span th:text="${name}+'欢迎你来到我的世界!'"></span>欢迎你来到我的世界
+    <br>
+    <span th:text="|${name},欢迎你来到我的世界!|"></span>
+</body>
+</html>

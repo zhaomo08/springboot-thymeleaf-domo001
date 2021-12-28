@@ -1,0 +1,6 @@
+spring:
+  thymeleaf:
+    cache: false
+  messages:
+    encoding: utf-8
+    basename: message_zh_CN

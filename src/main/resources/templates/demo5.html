@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{title}">Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{css/style.css}" href="css/webbase.css" />
+</head>
+<body>
+
+    <!--<div th:insert="~{footer::head}"></div>-->
+    <!--<div th:replace="~{footer::head}"></div>-->
+    <div th:include="~{footer::head}"></div>
+
+
+    <!-- th:if 条件成立就显示-->
+    <h1 th:if="${flag=='false'}" >中公教育</h1>
+    <h1 th:if="${flag}" >中公教育</h1>
+
+    <!-- th:unless 条件不成立就显示-->
+    <h2 th:unless="${flag=='false'}" >优就业</h2>
+
+    <!-- switch 选择语句-->
+    <div th:switch="${menu}">
+    <p th:case="'admin'">User is an administrator</p>
+    <p th:case="${manager}">User is a manager</p>
+    </div>
+
+    <div th:insert="~{footer::foot}"></div>
+</body>
+</html>
